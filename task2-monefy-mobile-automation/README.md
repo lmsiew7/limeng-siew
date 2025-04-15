@@ -36,14 +36,13 @@ This project is an automated UI testing framework for the [Monefy](https://play.
 
 ---
 
-## Tech Stack
-### Approach
+## Approach
 - Follows the **Page Object Model (POM)** design pattern.
 - `BasePage` handles common UI actions.
 - Each screen (e.g., `AccountPage`) extends `BasePage`.
 - `BaseTest` handles test setup and teardown 
 
-### Reasoning
+## Tech Stack
 - **Java**: Robust and widely used for Appium.
 - **Appium**: Supports cross-platform mobile automation.
 - **TestNG**: Powerful testing framework with annotations and parallel execution.
@@ -54,30 +53,20 @@ This project is an automated UI testing framework for the [Monefy](https://play.
 
 ## Getting Started
 
-### 1. Install Project Dependencies
-```bash
-mvn clean install
-```
-
-### 2. Start Android Emulator
+### 1. Start Android Emulator
 Ensure your Android emulator or physical device is up and running. You can verify this using the adb devices command:
 ```bash
 adb devices
 ```     
-> This will list all connected devices. A properly running emulator should appear as something like:
-```bash
-List of devices attached
-emulator-5554	device
-```
        
-### 3. Start Appium Server
+### 2. Start Appium Server
 ```bash
 appium
 ```
 
-### 4. Run the Test Suite
+### 3. Install Project Dependencies and Run the Test Suite
 ```bash
-mvn clean test
+mvn clean install
 ```
 
 ---
@@ -98,12 +87,12 @@ allure open target/allure-report
 
 ## Running in Docker
 
-### Build Image
+### 1. Build Image
 ```bash
 docker build -t android-test .
 ```
 
-### Run Tests
+### 2. Run Tests
 ```bash
 docker run -it --rm \
   -e APPIUM_SERVER=http://host.docker.internal:4723 \
@@ -114,6 +103,13 @@ docker run -it --rm \
 
 > `host.docker.internal` is supported on macOS and Windows only.  
 > Ensure that `APK_PATH` is accessible by the Appium server.
+
+> Allure report will save to `./reports`
+
+### 3. Open the Allure Report
+```bash
+allure open reports
+```
 
 ---
 

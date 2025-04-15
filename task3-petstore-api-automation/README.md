@@ -11,7 +11,7 @@ This project is an automated API test suite for the **Petstore** `/store` domain
 
 ---
 
-### Approach
+## Approach
 - Modular Test Design: separated tests, API calls (StoreApi), and test data (OrderData).
 - Used json-schema-validator to enforce response structure, reduced test fragility and ensured API contract compliance.
 - Used Config.BASE_URL with system properties for easy switching between environments.
@@ -38,10 +38,6 @@ http://localhost:8080/api/v3
 > To run against the public Petstore API:
 ```bash
 mvn test -DbaseUrl=https://petstore3.swagger.io/api/v3
-```
-> Only run test
-```bash
-mvn clean test
 ```
 
 ---
@@ -85,6 +81,4 @@ allure open reports
 
 ## Notes
 - Only files named `*Test.java` will be picked up by TestNG.
-- Use `src/test/resources/schemas` to store JSON schema files.
-- For parallel execution or environment-specific configs, consider extending `testng.xml`.
 - The Docker image size has been optimized using a multi-stage build and is executed with `java` instead of `mvn` to avoid unnecessary dependencies. It can be further minimized by adopting a more lightweight base image.

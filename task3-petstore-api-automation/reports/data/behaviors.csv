@@ -1,0 +1,3 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"Petstore API - STORE Domain","Negative Test Scenarios","Validate API behavior for invalid inputs and edge cases","0","0","2","0","0"
+"Petstore API - STORE Domain","Order Management and Inventory","Verify end-to-end order lifecycle and inventory tracking","0","0","4","0","0"

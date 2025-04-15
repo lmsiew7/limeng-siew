@@ -10,7 +10,7 @@ RUN mvn clean package -DskipTests
 RUN mvn dependency:copy-dependencies -DincludeScope=test -DoutputDirectory=target/dependency
 
 # Stage 2: Minimal runtime image
-FROM eclipse-temurin:17-alpine
+FROM eclipse-temurin:17-jdk
 
 ENV API_BASE_URL=http://host.docker.internal:8080/api/v3
 
