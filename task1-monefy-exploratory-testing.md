@@ -32,10 +32,12 @@
 
 
 ## Findings
+
 **Testing device:** iPhone 15 Pro Max
+
 **iOS Version:** iOS 18.4
 
-Screenshots can be found in the ***task1-test-screenshots*** folder
+Screenshots can be found in [task1-test-screenshots](task1-test-screenshots) 
 
 ## Bug Report
 
